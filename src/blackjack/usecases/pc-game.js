@@ -28,7 +28,7 @@ export const pcGame = ( minScore, deck, scores, scoresHTML, playersCards ) => {
     pcScore = getScore( card, scores.length - 1, scores, scoresHTML );
     createCard( card, scores.length - 1, playersCards )
 
-  } while ( pcScore < minScore && minScore <= 21 )
+  } while ( pcScore <= minScore && minScore <= 21 )
 
   chooseWinner( scores );
 }
